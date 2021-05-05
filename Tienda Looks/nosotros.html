@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script src="js/jquery.flexslider.js"></script>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/script.js"></script>
+    <title>Look's® Chile</title>
+    <link rel="icon" href="img/logo look2.png" type="image/png"/>
+	<script type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+    <div class="logo">
+        <center><h4> <img src="img/logo look2.png" height="28" alt="CoolBrand"> Look's</h4></center>
+    </div>
+    <nav>
+        <ul class="menu">
+            <li class="item"><a href="home.html">Inicio</a></li>
+            <li class="item"><a href="hombre.html">Hombre</a></li>
+            <li class="item"><a href="mujer.html">Mujer</a></li>
+            <li class="item"><a href="nosotros.html">Nosotros</a></li>
+            <li class="item"><a href="suscribete.html">Login</a></li>
+            <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+        </ul>
+    </nav>
+
+    <script>
+        const toggle = document.querySelector(".toggle");
+        const menu = document.querySelector(".menu");
+        const items = document.querySelectorAll(".item");
+
+        /* Toggle mobile menu */
+        function toggleMenu() {
+            if (menu.classList.contains("active")) {
+                menu.classList.remove("active");
+                toggle.querySelector("a").innerHTML = "<i class='fas fa-bars'></i>";
+            } else {
+                menu.classList.add("active");
+                toggle.querySelector("a").innerHTML = "<i class='fas fa-times'></i>";
+            }
+        }
+
+        /* Activate Submenu */
+        function toggleItem() {
+            if (this.classList.contains("submenu-active")) {
+                this.classList.remove("submenu-active");
+            } else if (menu.querySelector(".submenu-active")) {
+                menu.querySelector(".submenu-active").classList.remove("submenu-active");
+                this.classList.add("submenu-active");
+            } else {
+                this.classList.add("submenu-active");
+            }
+        }
+
+        /* Close Submenu From Anywhere */
+        function closeSubmenu(e) {
+            let isClickInside = menu.contains(e.target);
+
+            if (!isClickInside && menu.querySelector(".submenu-active")) {
+                menu.querySelector(".submenu-active").classList.remove("submenu-active");
+            }
+        }
+        /* Event Listeners */
+        toggle.addEventListener("click", toggleMenu, false);
+        for (let item of items) {
+            if (item.querySelector(".submenu")) {
+                item.addEventListener("click", toggleItem, false);
+            }
+            item.addEventListener("keypress", toggleItem, false);
+        }
+        document.addEventListener("click", closeSubmenu, false);
+    </script>
+    <!--MENU BAR FIN-->
+
+    
+  <!--IMÁGENES-->
+  <div class="nosotros">
+    <div class="img">
+        <img src="img/diego.png" alt="" class="item-img">
+    </div>
+    <div class="img">
+        <img src="img/tefi.png" alt="" class="item-img">
+    </div>
+  </div>
+<!--CIERRE IMÁGENES-->
+
+<!--DESCRIPCIÓN-->
+<section id="presentacion">
+    <h1>SOBRE NOSOTROS</h1>
+    <br><br>
+    <p>
+        Diego Argomedo y Estefani Benavides, estudiantes de informática y los creadores <br>
+        de Look's emprendimiento que nació a través de un trabajo para el instituto durante <br>
+        clases online en plena pandemia mundial. Nuestra motivación es que nuestros clientes <br>
+        se sientan completamente libres y cómodos utilizando las distintas prendas de nuestra<br>
+        marca, que su identidad sea representada con nuestro sello para un estilo único.<br>
+        <br>
+    </p>
+</section>
+<!-- CIERRE DESCRIPCIÓN-->
+
+<!--FOOTER-->
+<section id="info">
+    <footer>
+        <strong><center>2020 &copy; Look´s</center></strong>
+    </footer>
+</section>
+<!--CIERRE FOOTER-->
+
+</body>
+</html>
