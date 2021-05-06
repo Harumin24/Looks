@@ -1,3 +1,8 @@
+.fondo {
+  background-color: white;
+}
+
+
 /* MENU BAR Basic styling */
 /* Basic styling */
 * {
@@ -226,7 +231,7 @@ a {
   
   .flex-control-nav li a{
       display: block;
-      background: #777777;
+      background: #ffffff;
       width: 12px;
       height: 12px;
       border-radius: 12px;
@@ -234,11 +239,11 @@ a {
   }
   
   .flex-control-nav li a:hover{
-      background: #2E2E2E;
+      background: #ffffff;
   }
   
   .flex-control-nav li a.flex-active{
-      background: #2E2E2E;	
+      background: #929292;	
   }
   
   .flex-direction-nav a{
