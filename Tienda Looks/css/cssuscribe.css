@@ -43,7 +43,7 @@ h3{
 
 .login input{
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .login input[type="text"], input[type="password"]{
@@ -57,19 +57,21 @@ h3{
 }
 
 .login button{
-    border: none;
+    border: inline;
     outline: none;
     height: 50px;
+    width: 100%;
+    position: center;
     background: black;
     color: #fff;
-    font-size: 18px;
+    font-size: 15px;
     border-radius: 20px;
-    align-content: center;
 }
 
 .login button:hover{
     cursor: pointer;
     background: white;
+    width: 100%;
     color: #000;
 }
 

@@ -15,7 +15,7 @@ body {
   font-size: 16px;
 }
 nav {
-  background: #D3B4C8;
+  background: #da2b74;
   padding: 0 15px;
 }
 a {
@@ -97,7 +97,7 @@ a {
   padding: 10px 15px;
 }
 .submenu-active {
-  background-color: #D3B4C8;
+  background-color: #da2b74;
   border-radius: 3px;
 }
 
@@ -244,7 +244,7 @@ a {
   }
   
   .flex-control-nav li a.flex-active{
-      background: #929292;	
+      background: #dfd6d6;	
   }
   
   .flex-direction-nav a{
@@ -338,24 +338,26 @@ a {
 }
 
 .button1 {
-  background-color: black;
-  color: white; 
+  background-color: white;
+  color: black; 
   border: 2px solid black;
   border-radius: 10px;
 }
 
 .button1:hover {
-  background-color: #A96F8E;
+  background-color: #b93698;
   color: white;
 }
 #info h1{
 	font-family: "Lucida Sans";
 	text-align: center;
+  color: #fff;
 	font-size: 120%;
 	font-weight: bold;
 }
 #info p{
 	font-family: "Lucida Sans";
+  color: white;
 	text-align: center;
 	font-size: 110%;
 }
@@ -364,12 +366,12 @@ a {
 	text-align: center;
 	font-size: 120%;
 	font-weight: bold;
-	border: 1px solid black;
+	border: 1px solid white;
 }
 
 /* Color Cuadro "Mantente Conectado" */
 #info footer{
-  background-color: #D3B4C8;
+  background-color: #da2b74;
 }
 #info h1{
   font-size: 20px;
@@ -433,7 +435,7 @@ body{
 	width: 90%;
 	padding: 15px 0;
 	margin-bottom: 20px;
-	background: #9e0f4b;
+	background: #da2b74;
   font-family: 'Lucida Sans';
 
 	text-align: center;
@@ -442,7 +444,7 @@ body{
 }
 
 .category_list .ct_item-active{
-	background: #2D3E50;
+	background: #7e258a;
 }
 
 /* PRODUCTOS ============*/
@@ -478,7 +480,7 @@ body{
 	display: block;
 	width: 100%;
 	padding: 8px 0;
-	background: #2D3E50;
+	background: #da2b74;
 
 	color: white;
 	text-align: center;
@@ -554,131 +556,144 @@ body{
 	}
 }
 
-/*NOSOTROS*/
-.nosotros{
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 3em;
-  margin-bottom: 3em;
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-gap: 30px;
-  max-width: 1000px;
-  align-items: center;
-}
-
-.nosotros img{
-  height: 300px;
-  width: 300px;
-  align-content: center;
-}
-
-.presentacion h1{
-  font-family: "Lucida Sans";
-text-align: center;
-font-size: 175%;
-font-weight: bold;
-margin-block: 10px;
-}
-
-.presentacion p{
-font-family: "Lucida Sans";
-text-align: center;
-font-size: 110%;
-margin-block: 20px;
-}
-
-.presentacion h2{
-font-family: "Lucida Sans";
-text-align: center;
-font-size: 110%;
-margin-top: 10px;
-margin-block: 20px;
-font-style: italic;
-}
-
-.presentacion{
-margin-block: 50px;
-}
-
-@media screen and (min-width: 590px) {
-  .nosotros{
-      grid-template-columns: repeat(1, 1fr);
-  }
-
-}
-
-@media screen and (min-width: 960px) {
-  .nosotros{
-      grid-template-columns: repeat(2, 1fr);
-  }
-  
-/*FIN NOSOTROS*/
-
-/*FIN REGISTRO*/
-.login button{
-  border: none;
-  outline: none;
-  height: 50px;
-  background: black;
-  color: #fff;
-  font-size: 18px;
-  border-radius: 20px;
-  align-content: center;
-}
-
-.login button:hover{
-  cursor: pointer;
-  background: white;
-  color: #000;
-}
-.login label{
+/* FORMULARIO REGISTRO */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
 }
 
-.login input{
+.contenedor{
+  max-width: 700px;
   width: 100%;
-  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
 }
-
-.login input[type="text"], input[type="password"]{
-  border: none;
-  border-bottom: 1px solid #D3B4C8;
-  background: transparent;
+.contenedor .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+.contenedor .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+.content form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+form .user-details .input-box{
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+form .input-box span.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .input-box input{
+  height: 45px;
+  width: 100%;
   outline: none;
-  height: 40px;
-  color: black;
   font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid rgb(0, 0, 0);
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
 }
-.login{
-  margin-top: 30px;
-  padding-left: 500px;
-  padding-right: 500px;
-  margin-bottom: 40px;
-  font-family: 'Poppins', sans-serif;
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+  border-color: #9b59b6;
+}
+ form .gender-details .gender-title{
+  font-size: 20px;
+  font-weight: 500;
+ }
+ form .category{
+   display: flex;
+   width: 80%;
+   margin: 14px 0 ;
+   justify-content: space-between;
+ }
+ form .category label{
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+ }
+ form .category label .dot{
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+ #dot-1:checked ~ .category label .one,
+ #dot-2:checked ~ .category label .two,
+ #dot-3:checked ~ .category label .three{
+   background: #000000;
+   border-color: #d9d9d9;
+ }
+ form input[type="radio"]{
+   display: none;
+ }
+ form .boton{
+   height: 45px;
+   margin: 35px 0
+ }
+ form .boton input{
+   height: 100%;
+   width: 100%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background: linear-gradient(135deg, #71b7e6, #9b59b6);
+ }
+ form .boton input:hover{
+  /* transform: scale(0.99); */
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+  }
+ @media(max-width: 584px){
+ .contenedor{
+  max-width: 100%;
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .category{
+    width: 100%;
+  }
+  .content form .user-details{
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar{
+    width: 5px;
+  }
+  }
+  @media(max-width: 459px){
+  .cont .content .category{
+    flex-direction: column;
+  }
 }
 
-.login h3{
-  font-family: "Lucida Sans";
-  text-align: center;
-  font-size: 175%;
-  font-weight: bold;
-  margin-bottom: 20px;
-
-}
-.form-group{
-  margin-top: 10px;
-}
-.form-controla{
-  margin-top: 5px;
-  margin-bottom: 10px;
-}
-.login select{
-  border: none;
-  border-bottom: 1px solid #D3B4C8;
-  background: transparent;
-}
-
-/*FIN REGISTRO*/
