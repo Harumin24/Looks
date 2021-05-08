@@ -5,22 +5,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
     <script src="js/jquery.flexslider.js"></script>
-    <script src="js/jquery-3.2.1.js"></script>
-    <script src="js/script.js"></script>
     <title>Look's® Chile</title>
     <link rel="icon" href="img/logo look2.png" type="image/png"/>
-	<script type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+    
+  $(window).load(function() {
+    $('.flexslider').flexslider({
+    	touch: true,
+    	pauseOnAction: false,
+    	pauseOnHover: false,
+    });
+  });
+    </script>
 </head>
 <body>
     <div class="logo">
-        <center><h4> <img src="img/logo look2.png" height="28" alt="CoolBrand"> Look's</h4></center>
+        <center><h4> <img src="img/logo look2.png" height="30" alt="CoolBrand"> Look's</h4></center>
     </div>
     <nav>
         <ul class="menu">
+            
             <li class="item"><a href="home.html">Inicio</a></li>
             <li class="item"><a href="hombre.html">Hombre</a></li>
             <li class="item"><a href="mujer.html">Mujer</a></li>
@@ -77,54 +87,40 @@
         document.addEventListener("click", closeSubmenu, false);
     </script>
     <!--MENU BAR FIN-->
-
-    
-  <!--IMÁGENES-->
-  <div class="nosotros">
-    <div class="img">
-        <img src="img/diego.png" alt="" class="item-img">
+    <!--RECUPERACIÓN DE CONTRASEÑA-->
+    <div class="login">
+            <h3>¿Olvidaste tu contraseña?</h3>
+            <p>!No te preocupes! Ingresa tu correo electrónico para que podamos ayudarte a recuperarla.</p>
+            <div class="form-group">
+                <label for="mail"><i class="fas fa-user"></i> E-mail</label>
+                <input type="text" class="form-control" name="mail" id="mail" placeholder="looks@looks.cl" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn">Enviar</button>
+                <a class="nav-link" href="inicioSesion.html"><button class="button2" >Volver</button></a> 
+            </div>
     </div>
-    <div class="img">
-        <img src="img/tefi.png" alt="" class="item-img">
-    </div>
-  </div>
-<!--CIERRE IMÁGENES-->
-
-<!--DESCRIPCIÓN-->
-<section class="presentacion">
-    <h1>SOBRE NOSOTROS</h1>
-    <p>
-        Diego Argomedo y Estefani Benavides, estudiantes de informática y los creadores <br>
-        de Look's emprendimiento que nació a través de un trabajo para el instituto durante <br>
-        clases online en plena pandemia mundial. Nuestra motivación es que nuestros clientes <br>
-        se sientan completamente libres y cómodos utilizando las distintas prendas de nuestra<br>
-        marca, que su identidad sea representada con nuestro sello para un estilo único.
-    </p>
-    <h2>Actualmente nos encontramos ubicados en Costanera Center ¡Visítanos!</h2>
-    <center><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.2015632318717!2d-70.60857878519053!3d-33.41798900323241!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf69d4854951%3A0x9a87ef2fefaad0df!2sCostanera%20Center!5e0!3m2!1ses!2scl!4v1620424029473!5m2!1ses!2scl" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe></center>
-</section>
-<!-- CIERRE DESCRIPCIÓN-->
-
-<!--FOOTER-->
-<section id="info">
-    <footer>
-        <br>
-        <h1> MANTENTE EN CONTACTO </h1>
-        <p>
-            Regístrate  recibir noticias sobre nuevos <br>
-            lanzamientos y promociones exclusivas.<br>
-        </p>
-       <br>
-        <form action="registro.html">
-        <center><button class="button button1">Pulsa Aquí</button></center>
-        </form>
-        <br>
-        <strong>
-            <center>2021 &copy; Look´s</center>
-        </strong>
-    </footer>
-</section>
+    <!--FIN RECUPERACIÓN DE CONTRASEÑA-->
+    <!--FOOTER-->
+    <section id="info">
+            <footer>
+                <br>
+                <h1> MANTENTE EN CONTACTO </h1>
+                <p>
+                    Regístrate  recibir noticias sobre nuevos <br>
+                    lanzamientos y promociones exclusivas.
+                    <br>
+                </p>
+               
+                <form action="registro.html">
+                <center><button class="button button1">Pulsa Aquí</button></center>
+                </form>
+                <br>
+                <strong>
+                    <center>2021 &copy; Look´s</center>
+                </strong>
+            </footer>
+        </section>
 <!--CIERRE FOOTER-->
-
 </body>
 </html>
