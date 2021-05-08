@@ -227,6 +227,7 @@ a {
   .flex-control-nav li{
       display: inline-block;
       margin: 0 6px;
+
   }
   
   .flex-control-nav li a{
@@ -337,15 +338,15 @@ a {
 }
 
 .button1 {
-  background-color: white;
-  color: black; 
+  background-color: black;
+  color: white; 
   border: 2px solid black;
   border-radius: 10px;
 }
 
 .button1:hover {
   background-color: #A96F8E;
-  color: black;
+  color: white;
 }
 #info h1{
 	font-family: "Lucida Sans";
@@ -369,7 +370,14 @@ a {
 /* Color Cuadro "Mantente Conectado" */
 #info footer{
   background-color: #D3B4C8;
-;
+}
+#info h1{
+  font-size: 20px;
+  margin-block: 10px;
+}
+#info p{
+  font-size: 15px;
+  margin-block: 10px;
 }
 /* CIERRE FOOTER CON MANTENTE EN CONTACTO */
 
@@ -382,7 +390,7 @@ a {
 }
 
 body{
-	background: #E0E4E5;
+	background: white;
 	font-family: 'Comic Sans';
 }
 
@@ -545,3 +553,132 @@ body{
 		margin-left: 0px;
 	}
 }
+
+/*NOSOTROS*/
+.nosotros{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 30px;
+  max-width: 1000px;
+  align-items: center;
+}
+
+.nosotros img{
+  height: 300px;
+  width: 300px;
+  align-content: center;
+}
+
+.presentacion h1{
+  font-family: "Lucida Sans";
+text-align: center;
+font-size: 175%;
+font-weight: bold;
+margin-block: 10px;
+}
+
+.presentacion p{
+font-family: "Lucida Sans";
+text-align: center;
+font-size: 110%;
+margin-block: 20px;
+}
+
+.presentacion h2{
+font-family: "Lucida Sans";
+text-align: center;
+font-size: 110%;
+margin-top: 10px;
+margin-block: 20px;
+font-style: italic;
+}
+
+.presentacion{
+margin-block: 50px;
+}
+
+@media screen and (min-width: 590px) {
+  .nosotros{
+      grid-template-columns: repeat(1, 1fr);
+  }
+
+}
+
+@media screen and (min-width: 960px) {
+  .nosotros{
+      grid-template-columns: repeat(2, 1fr);
+  }
+  
+/*FIN NOSOTROS*/
+
+/*FIN REGISTRO*/
+.login button{
+  border: none;
+  outline: none;
+  height: 50px;
+  background: black;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+  align-content: center;
+}
+
+.login button:hover{
+  cursor: pointer;
+  background: white;
+  color: #000;
+}
+.login label{
+  margin: 0;
+  padding: 0;
+}
+
+.login input{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.login input[type="text"], input[type="password"]{
+  border: none;
+  border-bottom: 1px solid #D3B4C8;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: black;
+  font-size: 16px;
+}
+.login{
+  margin-top: 30px;
+  padding-left: 500px;
+  padding-right: 500px;
+  margin-bottom: 40px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.login h3{
+  font-family: "Lucida Sans";
+  text-align: center;
+  font-size: 175%;
+  font-weight: bold;
+  margin-bottom: 20px;
+
+}
+.form-group{
+  margin-top: 10px;
+}
+.form-controla{
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.login select{
+  border: none;
+  border-bottom: 1px solid #D3B4C8;
+  background: transparent;
+}
+
+/*FIN REGISTRO*/

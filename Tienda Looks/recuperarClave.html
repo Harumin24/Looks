@@ -5,13 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
     <script src="js/jquery.flexslider.js"></script>
     <title>Look's® Chile</title>
     <link rel="icon" href="img/logo look2.png" type="image/png"/>
-	<script type="text/javascript" charset="utf-8">
+    <script type="text/javascript" charset="utf-8">
+    
   $(window).load(function() {
     $('.flexslider').flexslider({
     	touch: true,
@@ -21,14 +24,14 @@
   });
     </script>
 </head>
-<body class="fondo">
+<body>
     <div class="logo">
         <center><h4> <img src="img/logo look2.png" height="30" alt="CoolBrand"> Look's</h4></center>
     </div>
     <nav>
         <ul class="menu">
             
-            <li class="item"><a href="#">Inicio</a></li>
+            <li class="item"><a href="home.html">Inicio</a></li>
             <li class="item"><a href="hombre.html">Hombre</a></li>
             <li class="item"><a href="mujer.html">Mujer</a></li>
             <li class="item"><a href="nosotros.html">Nosotros</a></li>
@@ -84,66 +87,40 @@
         document.addEventListener("click", closeSubmenu, false);
     </script>
     <!--MENU BAR FIN-->
-
-    <!--CARRUSEL IMAGENES-->
-    <div class="flexslider">
-		<ul class="slides">
-			<li>
-				<img src="img/prendas.jpg" alt="">
-				<section class="flex-caption">
-					<p>ESTILO</p>
-				</section>
-			</li>
-			<li>
-				<img src="img/ny.jpg" alt="">
-				<section class="flex-caption">
-					<p>MODA</p>
-				</section>
-			</li>
-			<li>
-				<img src="img/zapatos.jpg" alt="">
-				<section class="flex-caption">
-					<p>INNOVACIÓN</p>
-				</section>
-			</li>
-		</ul>
-	</div>
-
-      <!-- INFORMAIÓN RRSS 'FOLLOW US' -->
-         <section id="rrss">
-            <br>
-            <h1> FOLLOW US!</h1>
-            <br>
-            <center><a href="https://www.facebook.com/Looks-107632338106386" class="btn" target="_blank"><img
-                        src="img/facebook.png"></a></center> <br>
-            <center><a href="https://www.instagram.com/looks_cl/" class="btn" target="_blank"><img
-                        src="img/instagram.png"></a></center><br>
-            <center><a href="https://twitter.com/" class="btn" target="_blank"><img src="img/twitter.png"></a>
-            </center><br>
-        </section>
-    <!--CIERRE FOLLOW US-->
-   
-    <!--FOOTER CON MANTENTE EN CONTACTO-->
+    <!--RECUPERACIÓN DE CONTRASEÑA-->
+    <div class="login">
+            <h3>¿Olvidaste tu contraseña?</h3>
+            <p>!No te preocupes! Ingresa tu correo electrónico para que podamos ayudarte a recuperarla.</p>
+            <div class="form-group">
+                <label for="mail"><i class="fas fa-user"></i> E-mail</label>
+                <input type="text" class="form-control" name="mail" id="mail" placeholder="looks@looks.cl" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn">Enviar</button>
+                <a class="nav-link" href="inicioSesion.html"><button class="button2" >Volver</button></a> 
+            </div>
+    </div>
+    <!--FIN RECUPERACIÓN DE CONTRASEÑA-->
+    <!--FOOTER-->
     <section id="info">
-    <footer>
-        <br>
-        <h1> MANTENTE EN CONTACTO </h1>
-        <p>
-            Regístrate  recibir noticias sobre nuevos <br>
-            lanzamientos y promociones exclusivas.
-            <br>
-        </p>
-       
-        <form action="registro.html">
-        <center><button class="button button1">Pulsa Aquí</button></center>
-        </form>
-        <br>
-        <strong>
-            <center>2021 &copy; Look´s</center>
-        </strong>
-    </footer>
-</section>
-    <!--CIERRE FOOTER-->
+            <footer>
+                <br>
+                <h1> MANTENTE EN CONTACTO </h1>
+                <p>
+                    Regístrate  recibir noticias sobre nuevos <br>
+                    lanzamientos y promociones exclusivas.
+                    <br>
+                </p>
+               
+                <form action="registro.html">
+                <center><button class="button button1">Pulsa Aquí</button></center>
+                </form>
+                <br>
+                <strong>
+                    <center>2021 &copy; Look´s</center>
+                </strong>
+            </footer>
+        </section>
+<!--CIERRE FOOTER-->
 </body>
-
 </html>
