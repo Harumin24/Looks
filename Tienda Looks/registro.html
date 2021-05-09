@@ -3,194 +3,194 @@
 <html lang="en" dir="ltr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-    <link rel="icon" href="img/logo look2.png" type="image/png" />
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
-    <script type="text/javascript">
-    
-    
-    $(document).ready(function(){
-        $("#error").hide(); /* ocultando el div de los errores */
-        
-        /*Indica que las validaciones del formulario sólo se ejecute con el "Submit"*/
-        $("#formulario_contacto").submit(function(){
-            var mensaje = "Por favor revisar los siguientes detalles en el formulario: ";
-            if($("#nombre_completo").val().trim().length == 0){ /*val es para obtener el valor del texto */ 
-                mensaje = mensaje + "<br>El campo nombre no debe estar vacío";                                                /*trim es para eliminar espacios en blanco */
-            } 
-            
-            if($("#correo").val().trim().length == 0){ 
-                mensaje = mensaje + "<br>El correo electrónico no puede quedar vacío";     
-            }
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <link rel="icon" href="img/logo look2.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+  <script type="text/javascript">
 
-            if( isNaN($("#telefono").val())){ 
-                mensaje = mensaje + "<br>El teléfono sólo pueden ser números";     
-            }
 
-            if(mensaje != "<br>Por favor revisar los siguientes detalles en el formulario"){
-               $("#error").html(mensaje); //mostrando el texto de la variable en el div del html
-               $("#error").show(); //hace visible el div 
-               event.preventDefault(); //evita que los datos del formulario se envien
-            }
-        });
+    $(document).ready(function () {
+      $("#error").hide(); /* ocultando el div de los errores */
+
+      /*Indica que las validaciones del formulario sólo se ejecute con el "Submit"*/
+      $("#formulario_contacto").submit(function () {
+        var mensaje = "Por favor revisar los siguientes detalles en el formulario: ";
+        if ($("#nombre_completo").val().trim().length == 0) { /*val es para obtener el valor del texto */
+          mensaje = mensaje + "<br>El campo nombre no debe estar vacío";                                                /*trim es para eliminar espacios en blanco */
+        }
+
+        if ($("#correo").val().trim().length == 0) {
+          mensaje = mensaje + "<br>El correo electrónico no puede quedar vacío";
+        }
+
+        if (isNaN($("#telefono").val())) {
+          mensaje = mensaje + "<br>El teléfono sólo pueden ser números";
+        }
+
+        if (mensaje != "<br>Por favor revisar los siguientes detalles en el formulario") {
+          $("#error").html(mensaje); //mostrando el texto de la variable en el div del html
+          $("#error").show(); //hace visible el div 
+          event.preventDefault(); //evita que los datos del formulario se envien
+        }
+      });
     });
 
-</script>   
+  </script>
 </head>
 
 <body class="fondo">
-    <div class="logo">
-        <center>
-            <h4> <img src="img/logo look2.png" height="30" alt="CoolBrand"> Look's</h4>
-        </center>
-    </div>
-    <nav>
-        <ul class="menu">
+  <div class="logo">
+    <center>
+      <h4> <img src="img/logo look2.png" height="30" alt="CoolBrand"> Look's</h4>
+    </center>
+  </div>
+  <nav>
+    <ul class="menu">
 
-            <li class="item"><a href="#">Inicio</a></li>
-            <li class="item"><a href="hombre.html">Hombre</a></li>
-            <li class="item"><a href="mujer.html">Mujer</a></li>
-            <li class="item"><a href="nosotros.html">Nosotros</a></li>
-            <li class="item"><a href="inicioSesion.html">Login</a></li>
-            <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
-        </ul>
-    </nav>
-    <script>
-        const toggle = document.querySelector(".toggle");
-        const menu = document.querySelector(".menu");
-        const items = document.querySelectorAll(".item");
+      <li class="item"><a href="home.html">Inicio</a></li>
+      <li class="item"><a href="hombre.html">Hombre</a></li>
+      <li class="item"><a href="mujer.html">Mujer</a></li>
+      <li class="item"><a href="nosotros.html">Nosotros</a></li>
+      <li class="item"><a href="inicioSesion.html">Login</a></li>
+      <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+    </ul>
+  </nav>
+  <script>
+    const toggle = document.querySelector(".toggle");
+    const menu = document.querySelector(".menu");
+    const items = document.querySelectorAll(".item");
 
-        /* Toggle mobile menu */
-        function toggleMenu() {
-            if (menu.classList.contains("active")) {
-                menu.classList.remove("active");
-                toggle.querySelector("a").innerHTML = "<i class='fas fa-bars'></i>";
-            } else {
-                menu.classList.add("active");
-                toggle.querySelector("a").innerHTML = "<i class='fas fa-times'></i>";
-            }
-        }
+    /* Toggle mobile menu */
+    function toggleMenu() {
+      if (menu.classList.contains("active")) {
+        menu.classList.remove("active");
+        toggle.querySelector("a").innerHTML = "<i class='fas fa-bars'></i>";
+      } else {
+        menu.classList.add("active");
+        toggle.querySelector("a").innerHTML = "<i class='fas fa-times'></i>";
+      }
+    }
 
-        /* Activate Submenu */
-        function toggleItem() {
-            if (this.classList.contains("submenu-active")) {
-                this.classList.remove("submenu-active");
-            } else if (menu.querySelector(".submenu-active")) {
-                menu.querySelector(".submenu-active").classList.remove("submenu-active");
-                this.classList.add("submenu-active");
-            } else {
-                this.classList.add("submenu-active");
-            }
-        }
+    /* Activate Submenu */
+    function toggleItem() {
+      if (this.classList.contains("submenu-active")) {
+        this.classList.remove("submenu-active");
+      } else if (menu.querySelector(".submenu-active")) {
+        menu.querySelector(".submenu-active").classList.remove("submenu-active");
+        this.classList.add("submenu-active");
+      } else {
+        this.classList.add("submenu-active");
+      }
+    }
 
-        /* Close Submenu From Anywhere */
-        function closeSubmenu(e) {
-            let isClickInside = menu.contains(e.target);
+    /* Close Submenu From Anywhere */
+    function closeSubmenu(e) {
+      let isClickInside = menu.contains(e.target);
 
-            if (!isClickInside && menu.querySelector(".submenu-active")) {
-                menu.querySelector(".submenu-active").classList.remove("submenu-active");
-            }
-        }
-        /* Event Listeners */
-        toggle.addEventListener("click", toggleMenu, false);
-        for (let item of items) {
-            if (item.querySelector(".submenu")) {
-                item.addEventListener("click", toggleItem, false);
-            }
-            item.addEventListener("keypress", toggleItem, false);
-        }
-        document.addEventListener("click", closeSubmenu, false);
-    </script>
-    <!--MENU BAR FIN-->
+      if (!isClickInside && menu.querySelector(".submenu-active")) {
+        menu.querySelector(".submenu-active").classList.remove("submenu-active");
+      }
+    }
+    /* Event Listeners */
+    toggle.addEventListener("click", toggleMenu, false);
+    for (let item of items) {
+      if (item.querySelector(".submenu")) {
+        item.addEventListener("click", toggleItem, false);
+      }
+      item.addEventListener("keypress", toggleItem, false);
+    }
+    document.addEventListener("click", closeSubmenu, false);
+  </script>
+  <!--MENU BAR FIN-->
 
-    <!--FORMULARIO-->
+  <!--FORMULARIO-->
 
-    <div class="contenedor">
-        <div class="title">Formulario de Registro</div>
-        <div class="content">
-          <form action="#">
-            <div class="user-details">
-              <div class="input-box">
-                <span class="details">Nombre Completo</span>
-                <input type="text" placeholder="Ingresa tu Nombre" required>
-              </div>
-              <div class="input-box">
-                <span class="details">Apodo</span>
-                <input type="text" placeholder="Ingresa tu Apodo" required>
-              </div>
-              <div class="input-box">
-                <span class="details">Correo Electrónico</span>
-                <input type="text" placeholder="look@gmail.com" required>
-              </div>
-              <div class="input-box">
-                <span class="details">Teléfono de Contacto</span>
-                <input type="text" placeholder="(+569) xxxx-xxxx" required>
-              </div>
-              <div class="input-box">
-                <span class="details">Contraseña</span>
-                <input type="text" placeholder="Contraseña" required>
-              </div>
-              <div class="input-box">
-                <span class="details">Confirma tu Contraseña</span>
-                <input type="text" placeholder="Confirma tu Contraseña" required>
-              </div>
-            </div>
-            <div class="gender-details">
-              <input type="radio" name="gender" id="dot-1">
-              <input type="radio" name="gender" id="dot-2">
-              <input type="radio" name="gender" id="dot-3">
-              <span class="gender-title">Género</span>
-              <div class="category">
-                <label for="dot-1">
-                <span class="dot one"></span>
-                <span class="gender">Hombre</span>
-              </label>
-              <label for="dot-2">
-                <span class="dot two"></span>
-                <span class="gender">Mujer</span>
-              </label>
-              <label for="dot-3">
-                <span class="dot three"></span>
-                <span class="gender">Prefiero no decirlo</span>
-                </label>
-              </div>
-            </div>
-            <div class="boton">
-              <input type="submit" value="Registrar">
-            </div>
-          </form>
+  <div class="contenedor">
+    <div class="title">Formulario de Registro</div>
+    <div class="content">
+      <form action="#">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Nombre Completo</span>
+            <input type="text" placeholder="Ingresa tu Nombre" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Apodo</span>
+            <input type="text" placeholder="Ingresa tu Apodo" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Correo Electrónico</span>
+            <input type="text" placeholder="look@gmail.com" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Teléfono de Contacto</span>
+            <input type="text" placeholder="(+569) xxxx-xxxx" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Contraseña</span>
+            <input type="text" placeholder="Contraseña" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Confirma tu Contraseña</span>
+            <input type="text" placeholder="Confirma tu Contraseña" required>
+          </div>
         </div>
-      </div>
+        <div class="gender-details">
+          <input type="radio" name="gender" id="dot-1">
+          <input type="radio" name="gender" id="dot-2">
+          <input type="radio" name="gender" id="dot-3">
+          <span class="gender-title">Género</span>
+          <div class="category">
+            <label for="dot-1">
+              <span class="dot one"></span>
+              <span class="gender">Hombre</span>
+            </label>
+            <label for="dot-2">
+              <span class="dot two"></span>
+              <span class="gender">Mujer</span>
+            </label>
+            <label for="dot-3">
+              <span class="dot three"></span>
+              <span class="gender">Prefiero no decirlo</span>
+            </label>
+          </div>
+        </div>
+        <div class="boton">
+          <input type="submit" value="Registrar">
+        </div>
+      </form>
     </div>
-    <br>
-    <!--FOOTER CON MANTENTE EN CONTACTO-->
-    <section id="info">
-        <footer>
-            <br>
-            <h1> MANTENTE EN CONTACTO </h1>
-            <p>
-                Regístrate para recibir noticias sobre nuevos <br>
-                lanzamientos y promociones exclusivas.<br>
-            </p>
-           <br>
-            <form action="registro.html">
-            <center><button class="button button1">Pulsa Aquí</button></center>
-            </form>
-            <br>
-            <strong>
-                <center>2021 &copy; Look´s</center>
-            </strong>
-        </footer>
-    </section>
-        <!--CIERRE FOOTER-->
-   
-    <!--CIERRE FOOTER-->
+  </div>
+  </div>
+  <br>
+  <!--FOOTER CON MANTENTE EN CONTACTO-->
+  <section id="info">
+    <footer>
+      <br>
+      <h1> MANTENTE EN CONTACTO </h1>
+      <p>
+        Regístrate para recibir noticias sobre nuevos <br>
+        lanzamientos y promociones exclusivas.<br>
+      </p>
+      <br>
+      <form action="registro.html">
+        <center><button class="button button1">Pulsa Aquí</button></center>
+      </form>
+      <br>
+      <strong>
+        <center>2021 &copy; Look´s</center>
+      </strong>
+    </footer>
+  </section>
+  <!--CIERRE FOOTER-->
+
+  <!--CIERRE FOOTER-->
 </body>
 
 </html>

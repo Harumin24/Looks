@@ -345,7 +345,7 @@ a {
 }
 
 .button1:hover {
-  background-color: #b93698;
+  background-color: #e02a8b;
   color: white;
 }
 #info h1{
@@ -586,7 +586,7 @@ body{
   height: 3px;
   width: 30px;
   border-radius: 5px;
-  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  background: linear-gradient(135deg, #78b5dd, #9b59b6);
 }
 .content form .user-details{
   display: flex;
@@ -655,6 +655,7 @@ form .input-box span.details{
    height: 45px;
    margin: 35px 0
  }
+ 
  form .boton input{
    height: 100%;
    width: 100%;
@@ -666,11 +667,11 @@ form .input-box span.details{
    letter-spacing: 1px;
    cursor: pointer;
    transition: all 0.3s ease;
-   background: linear-gradient(135deg, #71b7e6, #9b59b6);
+   background: rgb(230, 63, 91);
  }
  form .boton input:hover{
   /* transform: scale(0.99); */
-  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+  background: rgb(218, 147, 147);
   }
  @media(max-width: 584px){
  .contenedor{
