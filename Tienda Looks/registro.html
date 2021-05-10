@@ -20,7 +20,7 @@
 
       /*Indica que las validaciones del formulario sólo se ejecute con el "Submit"*/
       $("#formulario_contacto").submit(function () {
-        var mensaje = "Por favor revisar los siguientes detalles en el formulario: ";
+        var mensaje = "Favor revisar los siguientes datos en su registro: ";
         if ($("#nombre_completo").val().trim().length == 0) { /*val es para obtener el valor del texto */
           mensaje = mensaje + "<br>El campo nombre no debe estar vacío";                                                /*trim es para eliminar espacios en blanco */
         }
@@ -30,7 +30,11 @@
         }
 
         if (isNaN($("#telefono").val())) {
-          mensaje = mensaje + "<br>El teléfono sólo pueden ser números";
+          mensaje = mensaje + "<br>El teléfono de contacto sólo pueden ser números";
+        }
+
+        if ("#clave".val() != "#confirmclave".val()) {
+          mensaje = mensaje + "<br>Las contraseñas no coinciden";
         }
 
         if (mensaje != "<br>Por favor revisar los siguientes detalles en el formulario") {
@@ -38,6 +42,7 @@
           $("#error").show(); //hace visible el div 
           event.preventDefault(); //evita que los datos del formulario se envien
         }
+        
       });
     });
 
@@ -57,6 +62,7 @@
       <li class="item"><a href="hombre.html">Hombre</a></li>
       <li class="item"><a href="mujer.html">Mujer</a></li>
       <li class="item"><a href="nosotros.html">Nosotros</a></li>
+      <li class="item"><a href="Ayudanos.html">Ayúdanos</a></li>
       <li class="item"><a href="inicioSesion.html">Login</a></li>
       <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
     </ul>
@@ -114,31 +120,33 @@
   <div class="contenedor">
     <div class="title">Formulario de Registro</div>
     <div class="content">
-      <form action="#">
+      <form action="home.html" name="formulario_contacto">
         <div class="user-details">
           <div class="input-box">
-            <span class="details">Nombre Completo</span>
-            <input type="text" placeholder="Ingresa tu Nombre" required>
+            <span class="details"><label for="nombre_completo">Nombre Completo</label></span>
+            <input type="text" name="nombre_completo" id="nombre_completo"
+                    placeholder="Ingrese su nombre" required>
           </div>
           <div class="input-box">
-            <span class="details">Apodo</span>
-            <input type="text" placeholder="Ingresa tu Apodo" required>
+            <span class="details"><label for="apodo">Apodo</label></span>
+            <input type="text" name="apodo" id="apodo"
+            placeholder="Ingrese su Apodo" required>
           </div>
           <div class="input-box">
-            <span class="details">Correo Electrónico</span>
-            <input type="text" placeholder="look@gmail.com" required>
+            <span class="details"><label for="correo">Correo Electrónico</label></span>
+            <input type="email" name="correo" id="correo" placeholder="look@gmail.com" required>
           </div>
           <div class="input-box">
-            <span class="details">Teléfono de Contacto</span>
-            <input type="text" placeholder="(+569) xxxx-xxxx" required>
+            <span class="details"><label for="telefono">Teléfono de Contacto</label></span>
+            <input type="tel" name="telefono" id="telefono" placeholder="(9) xxxx-xxxx" required>
           </div>
           <div class="input-box">
-            <span class="details">Contraseña</span>
-            <input type="text" placeholder="Contraseña" required>
+            <span class="details"><label for="clave">Contraseña</label></span>
+            <input type="password"  name="clave" id="clave" placeholder="Contraseña" required>
           </div>
           <div class="input-box">
-            <span class="details">Confirma tu Contraseña</span>
-            <input type="text" placeholder="Confirma tu Contraseña" required>
+            <span class="details"><label for="confirmclave">Confirme su Contraseña</label></span>
+            <input type="password" name="confirmclave" id="confirmclave" placeholder="Confirma tu Contraseña" required>
           </div>
         </div>
         <div class="gender-details">
@@ -162,11 +170,11 @@
           </div>
         </div>
         <div class="boton">
+          <div id="error" class="alert alert-danger"></div>
           <input type="submit" value="Registrar">
         </div>
       </form>
     </div>
-  </div>
   </div>
   <br>
   <!--FOOTER CON MANTENTE EN CONTACTO-->

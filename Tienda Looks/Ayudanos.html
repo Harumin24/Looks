@@ -112,15 +112,40 @@
     <!--RECUPERACIÓN DE CONTRASEÑA-->
 
     <div class="contenedor">
-            <div class="title">¿Olvidaste tu contraseña?</div>
-            <p>!No te preocupes! Ingresa tu correo electrónico para que podamos ayudarte a recuperarla.</p>
+            <div class="title">Ayúdanos a mejorar</div>
+            <p>Para nosotros tu opinión es muy importante y queremos ofrecerte un mejor<br>
+                servicio cada vez. Por eso cuéntanos sobre su experiencia en Look's Store<br></p>
             <div class="content">
               <form action="home.html" name="formulario_recuperacion">
                 <div class="user-details">
-                  <div class="input-box">
-                    <span class="details"><label for="correo">Correo Electrónico</label></span>
-                    <input type="email" name="correo" id="correo" placeholder="look@gmail.com" required>
-                  </div>
+                    <div class="input-box">
+                        <span class="details"><label for="nombre_completo">Nombre</label></span>
+                        <input type="text" name="nombre_completo" id="nombre_completo"placeholder="Ingrese su nombre" required>
+                    </div>
+                    <div class="gender-details">
+                            <input type="radio" name="gender" id="dot-1">
+                            <input type="radio" name="gender" id="dot-2">
+                            <input type="radio" name="gender" id="dot-3">
+                            <span class="gender-title">¿Cómo calificarías tu experiencia en Look's?</span>
+                            <div class="category">
+                              <label for="dot-1">
+                                <span class="dot one"></span>
+                                <span class="gender">Buena 😀  </span>
+                              </label>
+                              <label for="dot-2">
+                                <span class="dot two"></span>
+                                <span class="gender">Más o menos😐  </span>
+                              </label>
+                              <label for="dot-3">
+                                <span class="dot three"></span>
+                                <span class="gender">Mal😕  </span>
+                              </label>
+                            </div>
+                    </div>
+                    <div class="input-box">
+                        <label for="comentario">Comentarios</label>
+                        <textarea class="form-control" id="comentario" name="comentario" rows="5" required></textarea>
+                    </div>
                 <div class="boton">
                     <div id="error" class="alert alert-danger"></div>
                   <div id="error" class="alert alert-danger"></div>
