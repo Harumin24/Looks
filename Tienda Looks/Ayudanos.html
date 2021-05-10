@@ -6,52 +6,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
     <script src="js/jquery.flexslider.js"></script>
     <title>Look's® Chile</title>
-    <link rel="icon" href="img/logo look2.png" type="image/png"/>
+    <link rel="icon" href="img/logo look2.png" type="image/png" />
     <script type="text/javascript" charset="utf-8">
-    
-  $(window).load(function() {
-    $('.flexslider').flexslider({
-    	touch: true,
-    	pauseOnAction: false,
-    	pauseOnHover: false,
-    });
-  });
+
+        $(window).load(function () {
+            $('.flexslider').flexslider({
+                touch: true,
+                pauseOnAction: false,
+                pauseOnHover: false,
+            });
+        });
     </script>
 
-<script type="text/javascript">  
-    $(document).ready(function(){
-        $("#error").hide(); //ocultando el div de los errores 
-        //indicar que las validaciones del formulario se ejecutaran solo cuando se
-        //presione el submit
-        $("#formulario_contacto").submit(function(){
-            var mensaje = "Por favor revisar los siguientes detalles en el formulario:";
-            if($("#correo").val().trim().length == 0){
-                mensaje = mensaje + "<br>El correo electrónico no puede estar vacío";
-            }
-            if(mensaje != "Por favor revisar los siguientes detalles en el formulario:"){
-                $("#error").html(mensaje); //mostrando el texto de la variable en el div del html
-                $("#error").show();//hace visible el div
-                event.preventDefault();//evita que los datos del formulario se envien
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#error").hide(); //ocultando el div de los errores 
+            //indicar que las validaciones del formulario se ejecutaran solo cuando se
+            //presione el submit
+            $("#formulario_contacto").submit(function () {
+                var mensaje = "Por favor revisar los siguientes detalles en el formulario:";
+                if ($("#correo").val().trim().length == 0) {
+                    mensaje = mensaje + "<br>El correo electrónico no puede estar vacío";
+                }
+                if (mensaje != "Por favor revisar los siguientes detalles en el formulario:") {
+                    $("#error").html(mensaje); //mostrando el texto de la variable en el div del html
+                    $("#error").show();//hace visible el div
+                    event.preventDefault();//evita que los datos del formulario se envien
 
-            } 
+                }
+            });
         });
-    });
     </script>
 
 </head>
+
 <body>
     <div class="logo">
-        <center><h4> <img src="img/logo look2.png" height="30" alt="CoolBrand"> Look's</h4></center>
+        <center>
+            <h4> <img src="img/logo look2.png" height="30" alt="CoolBrand"> Look's</h4>
+        </center>
     </div>
     <nav>
         <ul class="menu">
-            
+
             <li class="item"><a href="home.html">Inicio</a></li>
             <li class="item"><a href="hombre.html">Hombre</a></li>
             <li class="item"><a href="mujer.html">Mujer</a></li>
@@ -112,76 +115,78 @@
     <!--RECUPERACIÓN DE CONTRASEÑA-->
 
     <div class="contenedor">
-            <div class="title">Ayúdanos a mejorar</div>
-            <p>Para nosotros tu opinión es muy importante y queremos ofrecerte un mejor<br>
-                servicio cada vez. Por eso cuéntanos sobre su experiencia en Look's Store<br></p>
-            <div class="content">
-              <form action="home.html" name="formulario_recuperacion">
+        <div class="title">Ayúdanos a mejorar</div>
+        <p>Para nosotros tu opinión es muy importante y queremos ofrecerte un mejor<br>
+            servicio cada vez. Por eso cuéntanos sobre su experiencia en Look's Store<br></p>
+        <div class="content">
+            <form action="home.html" name="formulario_recuperacion">
                 <div class="user-details">
                     <div class="input-box">
                         <span class="details"><label for="nombre_completo">Nombre</label></span>
-                        <input type="text" name="nombre_completo" id="nombre_completo"placeholder="Ingrese su nombre" required>
+                        <input type="text" name="nombre_completo" id="nombre_completo" placeholder="Ingrese su nombre"
+                            required>
                     </div>
                     <div class="gender-details">
-                            <input type="radio" name="gender" id="dot-1">
-                            <input type="radio" name="gender" id="dot-2">
-                            <input type="radio" name="gender" id="dot-3">
-                            <span class="gender-title">¿Cómo calificarías tu experiencia en Look's?</span>
-                            <div class="category">
-                              <label for="dot-1">
+                        <input type="radio" name="gender" id="dot-1">
+                        <input type="radio" name="gender" id="dot-2">
+                        <input type="radio" name="gender" id="dot-3">
+                        <span class="gender-title">¿Cómo calificarías tu experiencia en Look's?</span>
+                        <div class="category">
+                            <label for="dot-1">
                                 <span class="dot one"></span>
-                                <span class="gender">Buena 😀  </span>
-                              </label>
-                              <label for="dot-2">
+                                <span class="gender">Buena 😀 </span>
+                            </label>
+                            <label for="dot-2">
                                 <span class="dot two"></span>
-                                <span class="gender">Más o menos😐  </span>
-                              </label>
-                              <label for="dot-3">
+                                <span class="gender">Más o menos😐 </span>
+                            </label>
+                            <label for="dot-3">
                                 <span class="dot three"></span>
-                                <span class="gender">Mal😕  </span>
-                              </label>
-                            </div>
+                                <span class="gender">Mal😕 </span>
+                            </label>
+                        </div>
                     </div>
                     <div class="input-box">
                         <label for="comentario">Comentarios</label>
                         <textarea class="form-control" id="comentario" name="comentario" rows="5" required></textarea>
-                    </div >
+                    </div>
                     <div class="input-box">
-                    <script src='https://www.google.com/recaptcha/api.js'></script>
-                    <script src='https://www.google.com/recaptcha/api.js?hl=es'></script>
-                    <div class="g-recaptcha" data-sitekey="6LcePAATAAAAAGPRWgx90814DTjgt5sXnNbV5WaW"></div>
+                        <script src='https://www.google.com/recaptcha/api.js'></script>
+                        <script src='https://www.google.com/recaptcha/api.js?hl=es'></script>
+                        <div class="g-recaptcha" data-sitekey="6LcePAATAAAAAGPRWgx90814DTjgt5sXnNbV5WaW"></div>
+                    </div>
+                    <div class="boton">
+                        <div id="error" class="alert alert-danger"></div>
+                        <div id="error" class="alert alert-danger"></div>
+                        <input type="submit" value="Enviar">
+                    </div>
                 </div>
-                <div class="boton">
-                    <div id="error" class="alert alert-danger"></div>
-                  <div id="error" class="alert alert-danger"></div>
-                  <input type="submit" value="Enviar">
-                </div>
-            </div>
-              </form>
-            </div>
+            </form>
+        </div>
     </div>
 
     <!--FIN RECUPERACIÓN DE CONTRASEÑA-->
     <!--FOOTER-->
     <section id="info">
-            <footer>
+        <footer>
+            <br>
+            <h1> MANTENTE EN CONTACTO </h1>
+            <p>
+                Regístrate para recibir noticias sobre nuevos <br>
+                lanzamientos y promociones exclusivas.
                 <br>
-                <h1> MANTENTE EN CONTACTO </h1>
-                <p>
-                    Regístrate para recibir noticias sobre nuevos <br>
-                    lanzamientos y promociones exclusivas.
-                    <br>
-                </p>
-               
-                <form action="registro.html">
+            </p>
+
+            <form action="registro.html">
                 <center><button class="button button1">Pulsa Aquí</button></center>
-                </form>
-                <br>
-                <strong>
-                    <center>2021 &copy; Look´s</center>
-                </strong>
-            </footer>
-        </section>
-<!--CIERRE FOOTER-->
+            </form>
+            <br>
+            <strong>
+                <center>2021 &copy; Look´s</center>
+            </strong>
+        </footer>
+    </section>
+    <!--CIERRE FOOTER-->
 </body>
+
 </html>

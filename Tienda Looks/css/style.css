@@ -232,7 +232,7 @@ a {
   
   .flex-control-nav li a{
       display: block;
-      background: #ffffff;
+      background: #b1b1b1;
       width: 12px;
       height: 12px;
       border-radius: 12px;
@@ -240,11 +240,11 @@ a {
   }
   
   .flex-control-nav li a:hover{
-      background: #ffffff;
+      background: #c0bfbf;
   }
   
   .flex-control-nav li a.flex-active{
-      background: #dfd6d6;	
+      background: #ffffff;	
   }
   
   .flex-direction-nav a{
@@ -274,10 +274,10 @@ a {
   
   .flex-direction-nav a:before {
     font-family: "flexslider-icon";
-    font-size: 40px;
+    font-size: 1000px;
     display: inline-block;
-    content: '\f001';
-    color: #fff;
+    content: '\f002';
+    color: rgb(102, 102, 102);
     text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
   }
   .flex-direction-nav a.flex-next:before {
@@ -290,8 +290,8 @@ a {
       top: 50%;
       text-align: center;
       width: 100%;
-      font-size: 45px;
-      color: #fff;
+      font-size: 40px;
+      color: rgb(255, 255, 255);
       font-weight: bold;
   }
   
@@ -316,11 +316,12 @@ a {
 
 /* FOLLOW US */
 #rrss h1{
+
 	font-family: "Lucida Sans";
 	text-align: center;
 	font-size: 175%;
 	font-weight: bold;
-  margin-top: 350px;
+
 }
 /* CIERRE FOLLOW US */
 
