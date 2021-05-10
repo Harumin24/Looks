@@ -15,7 +15,7 @@ body {
   font-size: 16px;
 }
 nav {
-  background: #da2b74;
+  background: #c580ad;
   padding: 0 15px;
 }
 a {
@@ -97,7 +97,7 @@ a {
   padding: 10px 15px;
 }
 .submenu-active {
-  background-color: #da2b74;
+  background-color: #c580ad;
   border-radius: 3px;
 }
 
@@ -345,7 +345,7 @@ a {
 }
 
 .button1:hover {
-  background-color: #e02a8b;
+  background-color: #D3B4C8;
   color: white;
 }
 #info h1{
@@ -371,7 +371,7 @@ a {
 
 /* Color Cuadro "Mantente Conectado" */
 #info footer{
-  background-color: #da2b74;
+  background-color: #c580ad;
 }
 #info h1{
   font-size: 20px;
@@ -435,7 +435,7 @@ body{
 	width: 90%;
 	padding: 15px 0;
 	margin-bottom: 20px;
-	background: #da2b74;
+	background: #c873ab;
   font-family: 'Lucida Sans';
 
 	text-align: center;
