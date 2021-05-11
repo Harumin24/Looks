@@ -35,7 +35,7 @@
           mensaje = mensaje + "<br>El campo nombre no debe estar vacío";  /*trim es para eliminar espacios en blanco */
         }
 
-        if (mensaje != "Favor revisar los siguientes datos en su registro: ") {
+        if (mensaje != "Favor revisar los siguientes datos: ") {
           $("#error").html(mensaje); //mostrando el texto de la variable en el div del html
           $("#error").show(); //hace visible el div 
           event.preventDefault(); //evita que los datos del formulario se envien
