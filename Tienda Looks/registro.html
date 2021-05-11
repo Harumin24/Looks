@@ -9,17 +9,15 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link rel="icon" href="img/logo look2.png" type="image/png" />
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
   <script type="text/javascript">
-
-
     $(document).ready(function () {
       $("#error").hide(); /* ocultando el div de los errores */
 
       /*Indica que las validaciones del formulario sólo se ejecute con el "Submit"*/
-      $("#formulario_contacto").submit(function () {
+      $("#formulario_registro").submit(function () {
         var mensaje = "Favor revisar los siguientes datos en su registro: ";
         if ($("#nombre_completo").val().trim().length == 0) { /*val es para obtener el valor del texto */
           mensaje = mensaje + "<br>El campo nombre no debe estar vacío";                                                /*trim es para eliminar espacios en blanco */
@@ -30,14 +28,10 @@
         }
 
         if (isNaN($("#telefono").val())) {
-          mensaje = mensaje + "<br>El teléfono de contacto sólo pueden ser números";
+          mensaje = mensaje + "<br>El teléfono de contacto sólo puede contener números";
         }
 
-        if ("#clave".val() != "#confirmclave".val()) {
-          mensaje = mensaje + "<br>Las contraseñas no coinciden";
-        }
-
-        if (mensaje != "<br>Por favor revisar los siguientes detalles en el formulario") {
+        if (mensaje != "Favor revisar los siguientes datos en su registro: ") {
           $("#error").html(mensaje); //mostrando el texto de la variable en el div del html
           $("#error").show(); //hace visible el div 
           event.preventDefault(); //evita que los datos del formulario se envien
@@ -62,6 +56,7 @@
       <li class="item"><a href="hombre.html">Hombre</a></li>
       <li class="item"><a href="mujer.html">Mujer</a></li>
       <li class="item"><a href="nosotros.html">Nosotros</a></li>
+      <li class="item"><a href="contactanos.html">Contáctanos</a></li>
       <li class="item"><a href="Ayudanos.html">Ayúdanos</a></li>
       <li class="item"><a href="inicioSesion.html">Login</a></li>
       <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
@@ -120,12 +115,12 @@
   <div class="contenedor">
     <div class="title">Formulario de Registro</div>
     <div class="content">
-      <form action="home.html" name="formulario_contacto">
+      <form action="home.html" name="formulario_contacto" id="formulario_registro">
         <div class="user-details">
           <div class="input-box">
             <span class="details"><label for="nombre_completo">Nombre Completo</label></span>
             <input type="text" name="nombre_completo" id="nombre_completo"
-                    placeholder="Ingrese su nombre" required>
+                    placeholder="Ingrese su nombre" >
           </div>
           <div class="input-box">
             <span class="details"><label for="apodo">Apodo</label></span>
@@ -134,11 +129,11 @@
           </div>
           <div class="input-box">
             <span class="details"><label for="correo">Correo Electrónico</label></span>
-            <input type="email" name="correo" id="correo" placeholder="look@gmail.com" required>
+            <input type="email" name="correo" id="correo" placeholder="look@gmail.com" >
           </div>
           <div class="input-box">
             <span class="details"><label for="telefono">Teléfono de Contacto</label></span>
-            <input type="tel" name="telefono" id="telefono" placeholder="(9) xxxx-xxxx" required>
+            <input type="tel" name="telefono" id="telefono" placeholder="(9) xxxx-xxxx" >
           </div>
           <div class="input-box">
             <span class="details"><label for="clave">Contraseña</label></span>
@@ -169,9 +164,9 @@
             </label>
           </div>
         </div>
-        <div class="boton">
-          <div id="error" class="alert alert-danger"></div>
-          <input type="submit" value="Registrar">
+        <div class="form-group">
+          <div id="error" class="alerta"></div>
+          <button type="submit" class="boton">Registrarse</button>
         </div>
       </form>
     </div>

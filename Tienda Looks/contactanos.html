@@ -34,6 +34,12 @@
         if ($("#nombre").val().trim().length == 0) { /*val es para obtener el valor del texto */
           mensaje = mensaje + "<br>El campo nombre no debe estar vacío";  /*trim es para eliminar espacios en blanco */
         }
+        if ($("#correo").val().trim().length == 0) {
+          mensaje = mensaje + "<br>El correo electrónico no puede quedar vacío";
+        }
+        if ($("#descripcion").val().trim().length == 0) {
+          mensaje = mensaje + "<br>Para poder ayudarte necesitamos que nos describas tu problema<br> o inquietud.";
+        }
 
         if (mensaje != "Favor revisar los siguientes datos en su registro: ") {
           $("#error").html(mensaje); //mostrando el texto de la variable en el div del html
@@ -118,9 +124,8 @@
     <!--RECUPERACIÓN DE CONTRASEÑA-->
 
     <div class="contenedor">
-        <div class="title">Ayúdanos a mejorar</div>
-        <p>Para nosotros tu opinión es muy importante y queremos ofrecerte un mejor<br>
-            servicio cada vez. Por eso cuéntanos sobre su experiencia en Look's Store<br></p>
+        <div class="title">Contáctanos</div>
+        <p>En Look´s Store estamos para brindarte la ayuda necesaria cada vez que lo requieras.<br></p>
         <div class="content">
             <form action="home.html" name="formulario_ayudanos" id="formulario_ayudanos">
                 <div class="user-details">
@@ -128,34 +133,15 @@
                         <span class="details"><label for="nombre">Nombre</label></span>
                         <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre">
                     </div>
-                    <div class="gender-details">
-                        <input type="radio" name="gender" id="dot-1">
-                        <input type="radio" name="gender" id="dot-2">
-                        <input type="radio" name="gender" id="dot-3">
-                        <span class="gender-title">¿Cómo calificarías tu experiencia en Look's?</span>
-                        <div class="category">
-                            <label for="dot-1">
-                                <span class="dot one"></span>
-                                <span class="gender">Buena 😀 </span>
-                            </label>
-                            <label for="dot-2">
-                                <span class="dot two"></span>
-                                <span class="gender">Más o menos😐 </span>
-                            </label>
-                            <label for="dot-3">
-                                <span class="dot three"></span>
-                                <span class="gender">Mal😕 </span>
-                            </label>
-                        </div>
-                    </div>
+
                     <div class="input-box">
-                        <label for="comentario">Comentarios</label>
-                        <textarea class="form-control" id="comentario" name="comentario" rows="5"></textarea>
+                        <span class="details"><label for="correo">Correo Electrónico</label></span>
+                        <input type="email" name="correo" id="correo" placeholder="look@gmail.com" >
                     </div>
+
                     <div class="input-box">
-                        <script src='https://www.google.com/recaptcha/api.js'></script>
-                        <script src='https://www.google.com/recaptcha/api.js?hl=es'></script>
-                        <div class="g-recaptcha" data-sitekey="6LcePAATAAAAAGPRWgx90814DTjgt5sXnNbV5WaW"></div>
+                        <label for="comentario">¿Cómo te podemos ayudar?</label>
+                        <textarea class="form-control" id="descripcion" name="comentario" rows="5" ></textarea>
                     </div>
                     <div class="form-group">
                         <div id="error" class="alerta"></div>

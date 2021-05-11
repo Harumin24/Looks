@@ -315,6 +315,10 @@ a {
  /* FIN CARRUSEL */
 
 /* FOLLOW US */
+#rrss{
+  margin-top: 30px;
+}
+
 #rrss h1{
   text-align: center;
   font-family: "Lucida Sans";
@@ -756,4 +760,11 @@ form .user-details .input-box{
   margin-top: 20px;
   font-size: 18px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+/*MENSAJES ALERTA JQUERY*/
+
+.alerta{
+  color: rgb(200, 141, 141);
+  border-color: #804d85;
 }
