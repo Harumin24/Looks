@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link rel="icon" href="img/logo look2.png" type="image/png" />
+  <title>Registro</title>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
   <script type="text/javascript">
     $(document).ready(function () {
@@ -36,7 +37,7 @@
           $("#error").show(); //hace visible el div 
           event.preventDefault(); //evita que los datos del formulario se envien
         }
-        
+
       });
     });
 
@@ -119,25 +120,23 @@
         <div class="user-details">
           <div class="input-box">
             <span class="details"><label for="nombre_completo">Nombre Completo</label></span>
-            <input type="text" name="nombre_completo" id="nombre_completo"
-                    placeholder="Ingrese su nombre" >
+            <input type="text" name="nombre_completo" id="nombre_completo" placeholder="Ingrese su nombre">
           </div>
           <div class="input-box">
             <span class="details"><label for="apodo">Apodo</label></span>
-            <input type="text" name="apodo" id="apodo"
-            placeholder="Ingrese su Apodo" required>
+            <input type="text" name="apodo" id="apodo" placeholder="Ingrese su Apodo" required>
           </div>
           <div class="input-box">
             <span class="details"><label for="correo">Correo Electrónico</label></span>
-            <input type="email" name="correo" id="correo" placeholder="look@gmail.com" >
+            <input type="email" name="correo" id="correo" placeholder="look@gmail.com">
           </div>
           <div class="input-box">
             <span class="details"><label for="telefono">Teléfono de Contacto</label></span>
-            <input type="tel" name="telefono" id="telefono" placeholder="(9) xxxx-xxxx" >
+            <input type="tel" name="telefono" id="telefono" placeholder="(9) xxxx-xxxx">
           </div>
           <div class="input-box">
             <span class="details"><label for="clave">Contraseña</label></span>
-            <input type="password"  name="clave" id="clave" placeholder="Contraseña" required>
+            <input type="password" name="clave" id="clave" placeholder="Contraseña" required>
           </div>
           <div class="input-box">
             <span class="details"><label for="confirmclave">Confirme su Contraseña</label></span>
@@ -166,7 +165,7 @@
         </div>
         <div class="form-group">
           <div id="error" class="alerta"></div>
-          <button type="submit" class="boton">Registrarse</button>
+         <center><button type="submit" class="boton">Registrarse</button></center>
         </div>
       </form>
     </div>

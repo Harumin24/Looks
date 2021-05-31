@@ -5,14 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
     <script src="js/jquery.flexslider.js"></script>
-    <title>Look's® Chile</title>
-    <link rel="icon" href="img/logo look2.png" type="image/png" />
+    <title>Ayúdanos</title>
+    <link rel="icon" href="img/logo look2.png" type="image/png"/>
     <script type="text/javascript" charset="utf-8">
 
         $(window).load(function () {
@@ -30,12 +28,12 @@
 
       /*Indica que las validaciones del formulario sólo se ejecute con el "Submit"*/
       $("#formulario_ayudanos").submit(function () {
-        var mensaje = "Favor revisar los siguientes datos: ";
+        var mensaje = "Por favor revisar los siguientes datos: <br>";
         if ($("#nombre").val().trim().length == 0) { /*val es para obtener el valor del texto */
-          mensaje = mensaje + "<br>El campo nombre no debe estar vacío";  /*trim es para eliminar espacios en blanco */
+          mensaje = mensaje + "<br>El campo Nombre no debe estar vacío";  /*trim es para eliminar espacios en blanco */
         }
 
-        if (mensaje != "Favor revisar los siguientes datos: ") {
+        if (mensaje != "Por favor revisar los siguientes datos: <br>") {
           $("#error").html(mensaje); //mostrando el texto de la variable en el div del html
           $("#error").show(); //hace visible el div 
           event.preventDefault(); //evita que los datos del formulario se envien
@@ -119,8 +117,13 @@
 
     <div class="contenedor">
         <div class="title">Ayúdanos a mejorar</div>
-        <p>Para nosotros tu opinión es muy importante y queremos ofrecerte un mejor<br>
-            servicio cada vez. Por eso cuéntanos sobre su experiencia en Look's Store<br></p>
+        <br>
+        <p>
+            Look's Store es una tienda que constantemente se retroalimenta de las opiniones de nuestros usuarios. Siempre intentamos mejorar la calidad de nuestros productos y presentar las mejores ofertas, descuentos y variedades a nuestro catálogo. <br>
+            <br>
+            Es por esto, que tu opinión es muy importante para nosotros y así, estar siempre al tanto de tus necesidades.
+
+        </p>
         <div class="content">
             <form action="home.html" name="formulario_ayudanos" id="formulario_ayudanos">
                 <div class="user-details">
@@ -150,16 +153,16 @@
                     </div>
                     <div class="input-box">
                         <label for="comentario">Comentarios</label>
-                        <textarea class="form-control" id="comentario" name="comentario" rows="5"></textarea>
+                        <textarea class="form-control" id="comentario" name="comentario" rows="8"></textarea>
                     </div>
                     <div class="input-box">
                         <script src='https://www.google.com/recaptcha/api.js'></script>
                         <script src='https://www.google.com/recaptcha/api.js?hl=es'></script>
                         <div class="g-recaptcha" data-sitekey="6LcePAATAAAAAGPRWgx90814DTjgt5sXnNbV5WaW"></div>
                     </div>
-                    <div class="form-group">
+                    <div class="input-box">
                         <div id="error" class="alerta"></div>
-                        <button type="submit" class="boton">Enviar</button>
+                      <button type="submit" class="boton">Enviar</button>
                     </div>
                 </div>
             </form>
@@ -168,6 +171,7 @@
 
     <!--FIN RECUPERACIÓN DE CONTRASEÑA-->
     <!--FOOTER-->
+    
     <section id="info">
         <footer>
             <br>

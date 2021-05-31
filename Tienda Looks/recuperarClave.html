@@ -5,14 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
     <script src="js/jquery.flexslider.js"></script>
-    <title>Look's® Chile</title>
     <link rel="icon" href="img/logo look2.png" type="image/png"/>
+    <title>Recuperar Contraseña</title>
     <script type="text/javascript" charset="utf-8">
     
   $(window).load(function() {
@@ -30,13 +28,13 @@
 
       /*Indica que las validaciones del formulario sólo se ejecute con el "Submit"*/
       $("#formulario_clave").submit(function () {
-        var mensaje = "Favor revisar los siguientes datos en su registro: ";
+        var mensaje = "Por favor revisar los siguientes datos en su registro: <br>";
         
         if ($("#correo").val().trim().length == 0) {
-          mensaje = mensaje + "<br>El correo electrónico no puede quedar vacío";
+          mensaje = mensaje + "<i><br>El Correo Electrónico no puede quedar vacío";
         }
 
-        if (mensaje != "Favor revisar los siguientes datos en su registro: ") {
+        if (mensaje != "Por favor revisar los siguientes datos en su registro: ") {
           $("#error").html(mensaje); //mostrando el texto de la variable en el div del html
           $("#error").show(); //hace visible el div 
           event.preventDefault(); //evita que los datos del formulario se envien
@@ -116,7 +114,8 @@
 
     <div class="contenedor">
             <div class="title">¿Olvidaste tu contraseña?</div>
-            <p>!No te preocupes! Ingresa tu correo electrónico para que podamos ayudarte a recuperarla.</p>
+            <br>
+            <p>¡No te preocupes! Ingresa tu correo electrónico para que podamos ayudarte a recuperarla.</p>
             <div class="content">
               <form action="correorecu.html" name="formulario_recuperacion" id="formulario_clave">
                 <div class="user-details">
@@ -124,10 +123,10 @@
                     <span class="details"><label for="correo">Correo Electrónico</label></span>
                     <input type="email" name="correo" id="correo" placeholder="look@gmail.com" >
                   </div>
-                  <div class="form-group">
+                  <div class="input-box">
                     <div id="error" class="alerta"></div>
-                    <button type="submit" class="boton">Enviar</button>
-                  </div>
+                  <button type="submit" class="boton">Enviar</button>
+                </div>
             </div>
               </form>
             </div>
